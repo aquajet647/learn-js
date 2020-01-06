@@ -1,0 +1,17 @@
+import os
+import sys
+def draw(startdate):
+    os.system("""          
+    python pogchamp.py
+    git add .
+    git commit -m "updates"
+    GIT_COMMITTER_DATE="{data} 20:19:19 BST" git commit --amend --no-edit --date " {data} 20:19:19 BST"
+    git push origin master
+    """.format(data=startdate))
+
+if __name__ == '__main__':
+    data = sys.argv[1]
+    print(data)
+    draw(data)
+
+
