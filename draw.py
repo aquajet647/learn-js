@@ -15,7 +15,7 @@ def make_dates(startdate):
 
     gaps = [1 for _ in range(4)] + [2] + [1 for _ in range(13)] + [2] + [1 for _ in range(4)] + [4]
 
-    for _ in range(26):
+    for _ in range(37):
         gaps = gaps + [1,1,5]
 
     gaps = gaps + [1,1,6]
