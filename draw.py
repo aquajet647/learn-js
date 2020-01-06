@@ -13,7 +13,12 @@ def make_dates(startdate):
     #start on a monday 
     dates = [str(date)]
 
-    gaps = [1 for _ in range(4)] + [2] + [1 for _ in range(13)] + [2] + [1 for _ in range(2)]
+    gaps = [1 for _ in range(4)] + [2] + [1 for _ in range(13)] + [2] + [1 for _ in range(4)] + [4]
+
+    for _ in range(13):
+        gaps = gaps + [1,1,5]
+
+
     for g in gaps:
         date = date + datetime.timedelta(days=g)
         dates.append(str(date))
