@@ -15,10 +15,10 @@ def make_dates(startdate):
 
     gaps = [1 for _ in range(4)] + [2] + [1 for _ in range(13)] + [2] + [1 for _ in range(4)] + [4]
 
-    for _ in range(13):
+    for _ in range(26):
         gaps = gaps + [1,1,5]
 
-
+    gaps = gaps + [1,1,6]
     for g in gaps:
         date = date + datetime.timedelta(days=g)
         dates.append(str(date))
